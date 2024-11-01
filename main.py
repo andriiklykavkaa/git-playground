@@ -12,6 +12,11 @@ def is_game_over():
 
 
 def guess_is_valid(candidate):
+    
+    if guesses.__contains__(guess):
+        print("You have already guessed that word! Try something new!")
+        return False
+
     for letter in candidate:
         if letter not in word:
             print(f"You can not use letter {letter}")
